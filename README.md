@@ -1,15 +1,14 @@
-# HALF_ADDER_SUBTRACTOR
+[
+## HALF_ADDER_SUBTRACTOR
 
 Implementation-of-Half-Adder-and-Half Subtractor-circuit
 
-**AIM:**
+## AIM:
 
 To design a half adder and half subtractor circuit and verify its truth table in Quartus using Verilog programming.
 
-**Equipments Required:**
-
+## Equipments Required:
 Hardware – PCs, Cyclone II , USB flasher 
-
 Software – Quartus prime Theory Adders are digital circuits that carry out the addition of numbers.
 
 **Half Adder**
@@ -33,29 +32,82 @@ Borrow = A’B
 
 Figure -02 HALF Subtractor
 
-**Truthtable**
 
-**Procedure**
 
+## Procedure:
 1.	Type the program in Quartus software.
-
 2.	Compile and run the program.
-
 3.	Generate the RTL schematic and save the logic diagram.
-
 4.	Create nodes for inputs and outputs to generate the timing diagram.
-
 5.	For different input combinations generate the timing diagram.
 
 
-**Program:**
-
+## Program:
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+```
+Developed by: SRISHANTH J
+RegisterNumber:212223240160
+```
 
-**RTL Schematic**
+## Half Adder
+```
+module Half(a, b, sum, carry);
+input a,b;
+output sum,carry;
+assign sum =(a^b);
+assign carry=(a&b);
+endmodule
+```
+## Half subtractor
+```
+module halfsub(a, b, difference, borrow);
+input a,b;
+output difference,borrow;
+assign difference =(a^b);
+assign borrow=(~a&b);
+endmodule
+```
 
-**Output/TIMING Waveform**
+## Truth Table:
 
-**Result:**
+Half Adder:
+
+
+<img width="690" alt="image" src="https://github.com/user-attachments/assets/dda92c8b-3d76-48e1-9904-fa1390506f18">
+
+
+Half Subractor:
+
+
+<img width="690" alt="image" src="https://github.com/user-attachments/assets/710c571b-5af7-4e4a-a096-48f1df8a1138">
+
+
+## RTL:
+
+Half Adder:
+
+
+<img width="677" alt="image" src="https://github.com/user-attachments/assets/9f166c82-6489-4cb9-93ca-a0352601dce0">
+
+Half Subractor:
+
+
+<img width="692" alt="image" src="https://github.com/user-attachments/assets/da300708-a3e5-4571-90c5-afe66f37823c">
+
+
+## Output/timing waveform:
+
+Half Adder:
+
+
+<img width="702" alt="image" src="https://github.com/user-attachments/assets/6214011e-1bd0-469b-872c-5682f1eca8a1">
+
+Half Subractor:
+
+
+<img width="735" alt="image" src="https://github.com/user-attachments/assets/9020eaae-2300-44af-a26b-76a96f623030">
+
+## Result:
+The code is excecuted successfully.
+
